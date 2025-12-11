@@ -4,7 +4,9 @@ const urlsToCache = [
   '/index.html',
   '/style.css',
   '/musicPlayer.js',
-  '/moodDetect.js'
+  '/moodDetect.js',
+  '/manifest.json',  
+  '/musical-note.png'
 ];
 
 self.addEventListener('install', event => {
