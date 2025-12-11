@@ -1,0 +1,77 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion responsive music player</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" > 
+</head>
+
+<body>
+  <div class="player-container">
+    <div class="player-header">
+        <h1>How are you today?</h1>
+        <button class="folder-toggle-btn" id="folderToggleBtn">
+            <i class="bi bi-folder"></i>
+        </button>
+    </div>
+    <div class="now-playing">
+        <p class="track-title" id="trackTitle">No Track Selected</p>
+        <p class="track-artist" id="trackArtist">Select a track to play</p>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="time-display">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="control-btn" id="prevBtn" title="Previous">
+            <i class="bi bi-skip-backward"></i>
+        </button>      
+        <button class="control-btn play-btn" id="playPauseBtn" title="Play">
+            <i class="bi bi-play" id="playIcon"></i>
+        </button>
+        <button class="control-btn" id="nextBtn" title="Next">
+            <i class="bi bi-skip-forward"></i>
+        </button>
+    </div>
+    <div class="volume-container">
+        <i class="bi bi-volume-down"></i>
+        <input type="range" class="form-range volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+        <i class="bi bi-volume-up"></i>
+    </div> 
+    <div class="playlist" id="playlist">
+        <div class="text-center text-muted py-4">
+            No tracks in playlist
+        </div>
+    </div>
+    <div class="folder-panel" id="folderPanel">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="h5 mb-0"><i class="bi bi-folder me-2"></i>Music Folders</h3>
+            <button class="btn btn-sm btn-outline-secondary" id="closeFolderPanel">Close</button>
+        </div>
+        <div class="folder-list" id="folderList"></div>
+        <div class="drag-drop-area" id="dragDropArea">
+            <div class="drag-drop-icon">
+                <i class="bi bi-cloud-arrow-up" style="font-size: 2.5rem;"></i>
+            </div>
+            <p class="mb-2">Upload your MP3 files here</p>
+            <input type="file" class="file-input" id="fileInput" accept=".mp3,audio/*" multiple>
+        </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <audio id="audioPlayer"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/addons/p5.sound.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="musicPlayer.js"></script>
+  <script src="moodDetect.js"></script>
+</body>
+</html>
