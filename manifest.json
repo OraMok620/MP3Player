@@ -1,0 +1,21 @@
+{
+  "name": "Emotion Responsive Music Player",
+  "short_name": "MusicPlayer",
+  "description": "Music player that responds to your emotions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4a6fa5",
+  "theme_color": "#4a6fa5",
+  "icons": [
+    {
+      "src": "musical-note-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "musical-note-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
