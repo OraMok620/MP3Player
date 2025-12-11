@@ -8,12 +8,12 @@
   "theme_color": "#4a6fa5",
   "icons": [
     {
-      "src": "musical-note-192.png",
+      "src": "musical-note.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "musical-note-512.png",
+      "src": "musical-note.png",
       "sizes": "512x512",
       "type": "image/png"
     }
